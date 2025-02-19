@@ -1,0 +1,126 @@
+/* Reseta margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* Seção Principal */
+.main-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.main-section .promo-text h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.main-section .promo-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.main-section .highlight-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Galeria de Destinos */
+.destinations {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.destinations h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.destination {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 30%;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+}
+
+.destination img {
+    width: 100%;
+    height: auto;
+}
+
+.destination-info {
+    padding: 20px;
+}
+
+.destination-info h3 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.destination-info p {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-content p {
+    font-size: 1em;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
