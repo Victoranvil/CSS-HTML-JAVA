@@ -1,0 +1,43 @@
+/* Ajuste de tamanho para todas as imagens */
+img {
+    max-width: 500px;
+    height: auto;
+    transition: 0.3s ease-in-out;
+}
+
+/* Efeito de zoom ao passar o mouse */
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Banner com imagem de fundo */
+.banner {
+    width: 800px;
+    height: 300px;
+    background-image: url("brasil.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+/* Galeria Responsiva */
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-galeria img {
+    width: 100%;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
