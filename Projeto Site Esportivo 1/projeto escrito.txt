@@ -1,0 +1,104 @@
+SCRIPT PAGINA 1
+Preciso criar um site de noticias esportivas em html. Este site, vai conter dois arquivos, o html e o css separadamente. 
+Ele vai conter as seguintes caracteristicas.
+
+Logo do site no topo centralizado
+Abaixo da logo do site vai ter o nome do site escrito de forma legivel, grande e bonita, PIRATÉCNICO.
+
+Abaixo terá subtitulos  na horizontal, pode por uma cor diferente como background desses subtitulos, que futuramente clicando neles irão abrir novas paginas. O primeiro nome que é pagina inicial que estamos se chamará Inicio, e do lado terá os subtitulos Futebol Brasileiro, Futebol Mundo a Fora, Outros Esportes, Games e Videos e Noticias Aleatórias. 
+
+Faça também um botao de buscar no canto superior direito, para buscar alguma palavra no site caso necessário.
+Lembrando que estes subtitulos serão outros htmls que faram link com essa primeira pagina, todos podem ter o mesmo layout do css.
+
+Inicialmente vamos trabalhar apenas com a pagina inicial "inicio".
+
+
+Abaixo dos subtitulos vamos ter 4 topicos, 
+	Ultimas noticias
+	Melhores Transferencias
+	Ultimos resultados
+	Noticias Aleatórias (4 tópicos)
+
+Ultimas noticias: ela vai ter 3 noticias grandes, que passando a seta do mouse por cima dela elas ampliam e tirando diminuem. Essas noticias seram compostas por imagem, Titulo em cima delas e um breve resumo do que se trata, e se clicar na noticia vai ser levado diretamente para noticia. A primeira noticia pode ser um pouco maior, na vertical, e as outras duas, pode ficar do lado direito dela um pouco mais na horizontal, mas uma em cima da outra, dividindo espaço dando enfase pra primeira noticia.
+
+Melhores transferencias: Basicamente vai ter 3 grandes transferencias ou rumores de transferencias que estão aquecendo o mercado da bola, vai ter 3 fotos uma do lado da outra , não precisa ser grande as fotos, pode ser em uma tamanho menor do que as da noticias, mas nao precisa ser muito pequeno claro, de um tamanho que fique as 3 uma do lado da outra na horizontal. Quero que apareça em cima da foto se é Rumor, Transferido , Melou ou Negociando, a foto do time que ele ta saindo , uma setinha para direita e a foto do time que ele ta indo e o nome do jogador em baixo. Isso tudo dentro/em cima da imagem da principal da transferencia, que no caso serão 3 diferentes. e é claro, clicando na imagem vai redirecionar para a noticia da transferencia oficial.
+
+Ultimos resultados: Irá aparecer a tabela do campeonato brasileiro, e do lado direito irá aparecer a imagem dos ultimos resultados das partiddas, e em baixo os resultados da copa do brasil e da copa libertadores, uma do lado da outra tambem.
+
+Noticias Aleatorias: Por ultimo as noticias aleatorias ira aparecer 4 noticias aleatorias. As 4 noticias estará na vertical. Terá a imagem da noticia, aí do lado direto terá o titulo e em baixo do titulo o paragrafo explicando a noticia. Lembrando que o paragrafo acompanhará a imagem, entao quando a imagem acabar nao pode ter mais linhas. Pode fazer as imagens em um tamanho medio, nao precisa ser grande pra nao ocupar muito espaço. 
+
+Por enquanto é só, qualquer alteração irei pedir para voce fazer.
+
+PAGINA 1
+
+ORGANIZAÇÃO
+
+Nome do site: Piratécnico
+
+Inicio
+	Ultimas noticias
+	Melhores Transferencias
+	Ultimos resultados
+	Noticias Aleatórias (4 tópicos)
+
+
+Futebol Brasileiro
+	Times (imagem de cada time)
+	Ultimas noticias
+	Tabela de Jogos
+Futebol mundo a fora
+	Pais (fotos de bandeiras que tem campeonatos)
+	campeonatos (fotos das principais ligas e copas do pais selecionado)
+					times (fotos dos times de cada liga)
+	
+Outros Esportes
+Games
+Videos
+Noticias Aleatórias
+
+PAGINA 2
+
+FUTEBOL BRASILEIRO
+
+Campeonatos
+
+Brasileirao Série A
+	Noticia 3
+	Tabela ->
+	Partidas ->
+	clubes(20) ->link para a pagina clube com as noticias do clube
+Brasileirao Série B
+	Noticia 3
+	Tabela ->
+	Partidas ->
+	clubes(20) ->link para a pagina clube com as noticias do clube
+Brasileirao Série C
+	Noticia 3
+	Tabela ->
+	Partidas ->
+	clubes(20) ->link para a pagina clube com as noticias do clube
+Brasileirao Série D
+	Noticia 3
+	Tabela ->
+	Partidas ->
+	clubes(20) ->link para a pagina clube com as noticias do clube
+Copa do Brasil
+	Partidas
+	Chaveamento
+
+
+Jogos ao vivo
+	jogos
+
+Noticias Aleatórias
+	Noticias -> Cada noticia vai levar para uma noticia principal
+
+	Videos
+
+
+	
+
+
+
+
+

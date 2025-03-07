@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIRATÉCNICO - Notícias Esportivas</title> <!-- Mudando Titulo da Guia -->
+    <link rel="stylesheet" href="style.css"> <!-- Referenciando o arquivo CSS-->
+    <link rel="icon" href="imagens/Logos/PiraTécnicoPNG.png"> <!-- Mudar Logo da Guia -->
+
+</head>
+
+<body>
+    <script src="script.js"></script> <!--Comando java que faz o botao noturno funcionar-->
+    <header>
+        <div class="logo"> <img src="imagens/Logos/PiraTécnicoRedondo.png" alt="Logo do Site"> </div>
+        <!-- Criação da Classe Logo -->
+        <h1>PIRATÉCNICO</h1> <!-- Título da Página -->
+        <nav> <!-- Criação do nav, para agrupar os links de navegação dentro dele -->
+            <ul> <!-- Criação de uma lista NÂO ordenada (sem ordem de prioridade)-->
+                <!-- Referenciando as outras páginas-->
+                <li><a href="Inicio.html">Início</a></li>
+                <li><a href="paginas html/futebol_brasileiro.html">Futebol Brasileiro</a></li>
+                <li><a href="paginas html/futebol_mundo_a_fora.html">Futebol Mundo a Fora</a></li>
+                <li><a href="paginas html/outros_esportes.html">Outros Esportes</a></li>
+                <li><a href="paginas html/jogos_ao_vivo.html">Jogos ao vivo</a></li>
+                <li><a href="paginas html/noticias.html">Notícias</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>🔍</button>
+            </div>
+            <div class="tema-escuro">
+                <button id="toggle-theme">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section class="ultimas-noticias"> <!-- Classe para o tópico das Ultimas Noticias -->
+            <h2>Últimas Notícias</h2>
+            <div class="noticias">
+                <div class="noticia-grande"> <!-- Classe da primeira imagem das ultimas noticias -->
+                    <a href="paginas html/noticias.html"> <img src="imagens/Ultimas noticias/neymarsantos.svg"
+                            alt="Notícia Principal"></a>
+                    <h3>Neymar de volta a sua casa</h3>
+                    <p>Neymar após bater seus 100kg pós carnaval 2025, está de volta aos desGramados para LITERALMENTE
+                        deitar e rolar ...</p>
+                </div>
+                <div class="noticia-lateral"> <!-- Classe da segunda imagem das ultimas noticias -->
+                    <a href="paginas html/noticias.html"><img src="imagens/Ultimas noticias/arrascaetaCharuto.svg"
+                            alt="Notícia Secundária"></a>
+                    <!-- Segunda Imagem -->
+                    <h3>Arrascaeta é flagrado fumando um baseado!</h3>
+                    <p> Após ser flagrado fumando um baseado em plena Copacabana, <br> Arrascaeta é multado por faltar
+                        em treino do Flamengo!
+                        <br> A multa está estimada em 800 mil reais <br> e pode aumentar caso o jogador não justifique o
+                        motivo da ausência no treino!...
+                    </p>
+                </div>
+                <div class="noticia-lateral"> <!-- Classe da terceira imagem das ultimas noticias -->
+                    <a href="paginas html/noticias.html"><img src="imagens/Ultimas noticias/zidane e ronaldinho.svg"
+                            alt="Notícia Secundária"></a>
+                    <h3>Ronaldinho de volta aos gramados</h3>
+                    <p>Ronaldinho cogita voltar da aposentadoria e Zidade <br>ao saber disso também cogita voltar aos
+                        gramados...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="melhores-transferencias"> <!-- Classe para o tópico das melhores transferencias-->
+            <h2>Melhores Transferências</h2>
+            <div class="transferencias">
+                <div class="container">
+                    <span>Trasferido</span>
+                    <img src="imagens/Melhores Transferencias/willian.svg" alt="Transferencia">
+                    <p>Willian Bigode</p>
+                    <div class="bloco-transferencia">
+                        <img class="clube-atual" src="imagens/Escudos/santos.png" alt="Clube Atual">
+                        <seta class="seta">➡️</seta>
+                        <img class="clube-novo" src="imagens/Escudos/america.png" alt="Clube Novo">
+                    </div>
+                </div>
+
+
+
+                <div class="container">
+                    <span>Trasferido</span>
+                    <img src="imagens/Melhores Transferencias/vitorRoquePalmeiras.svg" alt="Transferencia">
+                    <p>Vitor Roque 🐯</p>
+                    <div class="bloco-transferencia">
+                        <img class="clube-atual" src="imagens/Escudos/betis.png" alt="Clube Atual">
+                        <seta class="seta">➡️</seta>
+                        <img class="clube-novo" src="imagens/Escudos/palmeiras.png" alt="Clube Novo">
+                    </div>
+
+
+                </div>
+                <div class="container">
+                    <span>Melou</span>
+                    <img src="imagens/Melhores Transferencias/mateuspareira.svg" alt="Transferencia">
+                    <p>Mateus Pereira</p>
+                    <div class="bloco-transferencia">
+                        <img class="clube-atual" src="imagens/Escudos/cruzeiro.png" alt="Clube Atual">
+                        <seta class="seta">➡️</seta>
+                        <img class="clube-novo" src="imagens/Escudos/zenit.png" alt="Clube Novo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ultimos-resultados"> <!-- Classe para o tópico dos ultimos resultados-->
+            <h2>Últimos Resultados</h2>
+            <div class="resultados">
+                <div class="tabela-campeonato">
+                    <h3>Campeonato Brasileiro Seria A</h3>
+                    <img src="imagens/Ultimos Resultados/brasileirao.png" alt="Tabela do Campeonato">
+                </div>
+                <div class="resultados-finais">
+                    <h3>Últimos Jogos</h3>
+                    <img src="imagens/Ultimos Resultados/jogos.png" alt="Resultados dos Jogos">
+                </div>
+            </div>
+        </section>
+
+        <section class="noticias-aleatorias"> <!-- Classe para o tópico das noticias aleatórias-->
+            <h2>Notícias Aleatórias</h2>
+            <div class="noticias-lista">
+                <div class="noticia-item">
+                    <img src="imagens/Noticias Aleatórias/cr7gols.svg" alt="Notícia Aleatória">
+                    <div>
+                        <h3>Se cuida Pelé!</h3>
+                        <p>O Gajo soma 925 gols oficiais na carreira (89 pelo Al-Nassr). O português está em incrível
+                            forma e é o artilheiro do Campeonato Saudita, com 17 gols, um a mais que o ex-companheiro de
+                            Real Madrid, Karim Benzema, do Al-Ittihad. Na temporada, são 23 tentos em 29 partidas....
+                        </p>
+                    </div>
+                </div>
+                <div class="noticia-item">
+                    <img src="imagens/Noticias Aleatórias/messiFerias.svg" alt="Notícia Aleatória">
+                    <div>
+                        <h3>Messi de Férias!</h3>
+                        <p>Messi está em seus ultimos anos de carreira, e parece que o futebol pra ele virou mais uma
+                            rotina de descanso do que de competição. Morando em Miami o jogador argentino só quer
+                            aproveitar sua fama e usufruir de suas conquistas que fez durante sua carreira...</p>
+                    </div>
+                </div>
+                <div class="noticia-item">
+                    <img src="imagens/Noticias Aleatórias/garro.svg" alt="Notícia Aleatória">
+                    <div>
+                        <h3>O que aconteceu com Garro?</h3>
+                        <p>O motociclista morreu no local do acidente. À CNN, o procurador Agüero relatou que Garro
+                            testou positivo no bafômetro, com um resultado de 0,5 gramas de álcool por litro de sangue.
+                            Na província de La Pampa, a tolerância de álcool para dirigir é zero. Na época, Garro foi
+                            preso preventivamente, mas já está em liberdade....</p>
+                    </div>
+                </div>
+                <div class="noticia-item">
+                    <img src="imagens/Noticias Aleatórias/robinhocadeia.svg" alt="Notícia Aleatória">
+                    <div>
+                        <h3>Título na cadeia?</h3>
+                        <p>O ex-jogador Robinho, condenado pela Justiça Italiana a nove anos de prisão por estupro
+                            coletivo, organiza um campeonato entre os presos, no qual ele será o 10 e capitão, e tentará
+                            ganhar o titulo que só o Ronaldinho tem...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+</body>
+
+<!--Seção para informações finais do site-->
+<section class="redes_sociais">
+    <!-- Redes Sociais -->
+    <div class="links-sociais">
+        <div class="instagram">
+            <img src="imagens/Logos/instagram.svg" alt="instagram">
+            <a href="https://www.instagram.com/" target="_blank"> @Piratecnico_NoticiasEsportivas</a>
+        </div>
+
+        <div class="facebook">
+            <img src="imagens/Logos/facebook.svg" alt="facebook">
+            <a href="https://www.facebook.com/" target="_blank"> Piratecnico_NoticiasEsportivas</a>
+        </div>
+
+        <div class="twitter">
+            <img src="imagens/Logos/twitter.svg" alt="twitter">
+            <a href="https://x.com/?lang=pt" target="_blank"> Piratecnico_NoticiasMemes</a>
+        </div>
+    </div>
+
+    <!-- Blog -->
+    <div class="blog">
+        <p>© Copyright 2025 PiraTécnico Notícias Esportivas e Aleatórias F.C.</p>
+        <img src="imagens/Logos/PiraTécnicoPNG.png" alt="logo">
+    </div>
+</section>
+
+</html>

@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+/*Formatação da classe Logo imagem */
+.logo img {
+    max-width: 150px;
+    text-align: center;
+    
+   
+}
+
+/* Mudando a fonte do titulo e o background também */
+h1 {       
+    font-family: Baskerville OlD Face, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+    margin: 10px 0;
+
+}
+
+
+
+
+
+
+nav {
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Cor das letras do subtitulo */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Comandos para o ícone de pesquisa - buscar */
+
+/* Posição do campo de busca */
+.search-bar {
+    float: right;
+    margin-top: -10px;
+    margin-right: 0px;
+}
+
+/*tamanho do campo de busca */
+.search-bar input {
+    padding: 5px;
+}
+
+.search-bar button {
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+}
+
+/*Formatação da pagina */
+main {
+    width: 80%; /*  Tamanho das imagens */
+    margin: auto;
+    padding: 20px 0px;
+}
+
+/*Design dos titulos de cada tópico*/
+h2 { 
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+/*Formatação das classes dos tópicos da página de inicio*/ 
+.ultimas-noticias, .melhores-transferencias, .ultimos-resultados, .noticias-aleatorias {
+    background: rgb(255, 255, 255); /*Cor de fundo das imagens*/
+    padding: 15px; /*Expansividade do background*/
+    margin-bottom: 20px; /*Distancia entre cada tópico*/
+    border-radius: 50px; /*raio da fronteira*/
+}
+/*Formatação dos tópicos*/
+.ultimas-noticias .noticias { 
+    display: flex; 
+    justify-content: space-between;
+    align-items: stretch;
+}
+/*Design das ultimas noticias separadamente */
+.noticia-grande {
+    flex: 3;  /*Tamanho da escala da noticia*/
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/*tamanho da imagem da noticia grande*/
+.noticia-grande img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.noticias-laterais {
+    display: flex; 
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.noticia-lateral {
+    flex: 1;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.noticia-lateral img {
+    width: 100%;
+    height: auto;
+}
+
+/*Comando para ampliar a imagem ao passar a seta */
+.noticia-grande:hover, .noticia-lateral:hover {
+    transform: scale(1.05);
+} 
+/*Todas as imagens dentro do container se ampliam ao passar o mouse por cima*/
+.container img:hover {
+    transform: scale(1.5); 
+    transition: transform 0.5s ease;
+}
+.melhores-transferencias .transferencias {
+    display: flex;
+    justify-content: space-around;
+}
+
+.transferencia {
+    text-align: center;
+}
+
+
+/*Formatação da caixa de transferencias */
+.container span {
+    display: block;
+    font-weight: bold;
+    background: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+
+/*Criação da transferencia de clube */
+.container {
+    
+    display: flex; /*deixa os itens flexiveis e modulaveis */
+    flex-direction: column; /* Empilha os elementos na vertical */
+    align-items: center; /* Centraliza os elementos */
+    gap: 20px; /* Espaço entre os elementos */
+}
+
+.bloco-transferencia {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os itens */
+}
+
+.seta  {
+    font-size: 24px; /* Tamanho da seta */
+    font-weight: bold;
+}
+
+
+
+.ultimos-resultados .resultados {
+    display: flex;
+    justify-content: space-between;
+}
+
+.noticias-aleatorias .noticias-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.noticia-item img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/*Design das midias sociais*/
+.redes_sociais {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+}
+
+/* Redes sociais alinhadas à esquerda */
+.links-sociais {
+    display: flex;
+    flex-direction: column;  /* Organiza os itens na vertical */
+    align-items: flex-start; /* Alinha os ícones e links à esquerda */
+    gap: 5px;                /* Pequeno espaçamento entre os itens */
+    margin-bottom: 20px;     /* Distância do blog */
+
+}
+
+/* Ícones e textos das redes sociais */
+.links-sociais div {
+    display: flex;
+    align-items: center;  /* Alinha o ícone com o texto */
+    gap: 8px;             /* Espaço entre o ícone e o nome */
+    
+}
+
+.links-sociais img {
+    width: 24px;         /* Tamanho do ícone */
+    height: auto;
+}
+
+.links-sociais a {
+    font-size: 14px;     /* Ajusta o tamanho do texto */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+}
+
+/* Blog centralizado com logo ao lado direito */
+.blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+/* Tamanho da logo do blog */
+.blog img {
+    
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+
+
+
+
