@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testando Variáveis</title>
+</head>
+<body>
+  <h1>Testando Variáveis</h1>
+  
+  <p id="resultado1"></p> <!-- Resultado Exercicio 1 -->
+  <p id="resultado2"></p> <!-- Resultado Exercicio 2 -->
+  <p id="resultado3"></p> <!-- Resultado Exercicio 3 -->
+  <p id="resultado4"></p> <!-- Resultado Exercicio 4 -->
+  <p id="resultado5"></p> <!-- Resultado Exercicio 5 -->
+
+  <script>
+    // Exercicio 1
+    let nome = "victor"; 
+    document.getElementById("resultado1").textContent = "Exercicio 1 - Nome: " + nome;
+
+    // Exercicio 2
+    let idade = 25; // Atribua um valor numérico inicial
+    document.getElementById("resultado2").textContent = "Exercicio 2 - Idade inicial: " + idade;
+    idade = 30; // Atribuindo um novo valor
+    document.getElementById("resultado2").textContent += " | Nova idade: " + idade;
+
+    // Exercicio 3
+    const pi = 3.14;
+    document.getElementById("resultado3").textContent = "Exercicio 3 - Pi: " + pi;
+    // pi = 3.1415; // Tenta alterar o valor de pi (isso causará erro)
+
+    // Exercicio 4
+    let a = 15;
+    let b = 5;
+    let resultado = a - b;
+    document.getElementById("resultado4").textContent = "Exercicio 4 - Resultado da subtração (a - b): " + resultado;
+
+    // Exercicio 5
+    function exemploEscopo() {
+      let x = 10; // A variável x está dentro da função
+      document.getElementById("resultado5").textContent = "Exercicio 5 - Valor de x dentro da função: " + x;
+    }
+  
+    exemploEscopo();
+
+    // Aqui, x não será acessível fora da função, então não há alteração no conteúdo da página
+  </script>
+</body>
+</html>
