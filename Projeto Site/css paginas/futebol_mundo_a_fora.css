@@ -1,0 +1,391 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+h1 {
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*Formatação da pagina */
+main {
+    width: 80%; /*  Tamanho das imagens */
+    margin: auto;
+    padding: 20px 0px;
+}
+
+/*Design dos titulos de cada tópico*/
+h2 { 
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+
+p {
+    color: black;
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 18px; /* Aumenta o tamanho da fonte (você pode ajustar o valor conforme necessário) */
+}
+
+
+/* Carrossel */
+.carrossel {
+    position: relative; /* Para posicionar os botões de navegação */
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Ajuste o tamanho conforme necessário */
+    margin: auto;
+}
+
+.slide {
+    flex: 0 0 100%; /* Faz com que cada slide ocupe 100% da largura */
+    text-align: center;
+    display: none; /* Esconde todos os slides inicialmente */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Para manter as imagens com proporções consistentes */
+}
+
+/* Botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Para visibilidade dos slides */
+.slide.active {
+    display: block; /* Mostra apenas o slide ativo */
+}
+
+
+/*Formatação das classes dos tópicos da página de inicio*/ 
+.noticias, .ligas, .campeonatos,  .selecoes {
+    background: white; /*Cor de fundo das imagens*/
+    padding: 15px; /*Expansividade do background*/
+    margin-bottom: 20px; /*Distancia entre cada tópico*/
+    border-radius: 50px; /*raio da fronteira*/
+}
+
+
+/* Define o estilo do container com a classe "categorias" */
+.categorias {
+    display: flex; /* Usa o modelo de layout Flexbox, permitindo alinhamento flexível dos itens filhos */
+    justify-content: center; /* Alinha os itens ao centro horizontalmente dentro do container */
+    gap: 50px; /* Cria um espaçamento de 20px entre os itens */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte quando não houver espaço suficiente */
+    text-align: center; /* Centraliza o texto dentro do container */
+    padding: 20px; /* Adiciona um espaçamento interno de 20px ao redor do conteúdo */
+    border-radius: 100px; /* Aplica bordas arredondadas com raio de 100px ao container */
+}
+
+/* Define o estilo dos links dentro do container com a classe "categorias" */
+.categorias a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: black; /* Define a cor do texto como preto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    display: flex; /* Usa o modelo de layout Flexbox dentro do link */
+    flex-direction: column; /* Coloca o conteúdo (texto e imagem) em coluna, com o texto abaixo da imagem */
+    align-items: center; /* Centraliza os itens (imagem e texto) horizontalmente dentro do link */
+    text-align: center; /* Centraliza o texto dentro do link */
+}
+
+/* Define o estilo das imagens dentro do container com a classe "categorias" */
+.categorias img {
+    width: 150px; /* Define a largura das imagens para 150px */
+    height: 150px; /* Define a altura das imagens para 150px */
+    max-width: 100%; /* Limita a largura da imagem para no máximo 100% da largura disponível */
+}
+
+
+.ligas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.liga {
+    position: relative;
+}
+
+.liga img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+/* Estilo do menu suspenso */
+.submenu {
+    display: none; /* Inicialmente, o menu está oculto */
+    position: absolute; /* O menu será posicionado de forma absoluta em relação ao seu elemento pai */
+    background-color: #686767; /* Cor de fundo do menu suspenso */
+    padding: 0px; /* Espaçamento interno ao redor do conteúdo do menu */
+    border-radius: 15px; /* Bordas arredondadas no menu */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do menu para dar um efeito de elevação */
+    top: 35%; /* Posiciona o menu um pouco abaixo do seu elemento pai (a 110% da altura do pai) */
+    right: 20%; /* Alinha o menu ao meio do elemento pai */
+    transform: translateX(84%); /* Move o menu 50% da sua largura para a esquerda para centralizá-lo */
+    white-space: nowrap; /* Impede que o conteúdo dentro do menu quebre para uma nova linha */
+    z-index: 9999; /* Garante que o menu fique por cima de qualquer outro conteúdo */
+}
+
+.submenu a {
+    color: white
+    }
+
+
+.submenu img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+}
+/* Exibe o menu suspenso quando o mouse passa sobre o elemento .liga */
+.liga:hover .submenu {
+    display: block; /* Torna o menu visível quando o mouse passa sobre o elemento .liga */
+}
+
+
+
+
+/*Design das midias sociais*/
+.redes_sociais {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+}
+
+/* Redes sociais alinhadas à esquerda */
+.links-sociais {
+    display: flex;
+    flex-direction: column;  /* Organiza os itens na vertical */
+    align-items: flex-start; /* Alinha os ícones e links à esquerda */
+    gap: 5px;                /* Pequeno espaçamento entre os itens */
+    margin-bottom: 20px;     /* Distância do blog */
+
+}
+
+/* Ícones e textos das redes sociais */
+.links-sociais div {
+    display: flex;
+    align-items: center;  /* Alinha o ícone com o texto */
+    gap: 8px;             /* Espaço entre o ícone e o nome */
+    
+}
+
+.links-sociais img {
+    width: 24px;         /* Tamanho do ícone */
+    height: auto;
+}
+
+.links-sociais a {
+    font-size: 14px;     /* Ajusta o tamanho do texto */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+}
+
+/* Blog centralizado com logo ao lado direito */
+.blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+/* Tamanho da logo do blog */
+.blog img {
+    
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+/*(FUNCIONALIDADES DO JAVASCRIPT)==========================================================================================================================================================================================================================*/
+/*Criação do botao voltar*/
+
+/* Estilo para o botão de Voltar */
+#btnVoltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnVoltar:hover {
+    background-color: #555;
+}
+
+/*Botao tema escuro*/
+
+.tema-escuro {
+    float: left;
+    margin-top: -10px;
+    margin-right: 0px;
+}
+
+.tema-escuro button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*Configuração para tema escuro*/
+
+/* Tema Escuro */
+.dark-mode {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode h1,
+.dark-mode .redes_sociais,
+.dark-mode .blog {
+    background-color: #000;
+    color: white;
+}
+
+.dark-mode h2 {
+    color: black;
+
+}
+
+.dark-mode nav {
+    background-color: #222;
+}
+
+.dark-mode nav ul li a {
+    color: white;
+}
+
+.dark-mode .ultimas-noticias, 
+.dark-mode .melhores-transferencias, 
+.dark-mode .ultimos-resultados, 
+.dark-mode .noticias-aleatorias {
+    background-color: #333;
+}
+
+.dark-mode .noticia-grande, 
+.dark-mode .noticia-lateral {
+    background-color: #444;
+}
+
+.dark-mode .search-bar button {
+    background-color: #777;
+}
+
+/* Comandos para o ícone de pesquisa - buscar */
+
+/* Posição do campo de busca */
+.search-bar {
+    float: right;
+    margin-top: -10px;
+    margin-right: 0px;
+}
+
+/*tamanho do campo de busca */
+.search-bar input {
+    padding: 5px;
+}
+
+.search-bar button {
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+}
+
+.highlight {
+    background-color: yellow; /* Cor de fundo para destacar a palavra */
+    font-weight: bold;         /* Deixar em negrito */
+}
+
+.hidden {
+    display: none;
+}
+
+
+
