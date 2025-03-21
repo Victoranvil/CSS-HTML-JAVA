@@ -1,0 +1,1894 @@
+/*DESIGN PADRAO DO SITE==========================================================================================================================================================================================================================*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 150px;
+    text-align: center;
+}
+
+/*Remove o sublinhado de todos os links escritos*/
+a {
+
+        text-decoration: none; /* Remove o sublinhado */
+        color: black; /* Define a cor desejada */
+    }
+    
+
+h1 {
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/*Comandos Site Oficial do Galo*/
+.noticias-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.noticia.pequena, .noticia.destaque {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.noticia.destaque {
+    grid-column: 1;
+    grid-row: span 2;
+}
+
+.noticia img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.noticia:hover {
+    transform: scale(1.05);
+}
+
+.partidas-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.partidas-container img {
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+.video-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.video-container img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/*Design das midias sociais*/
+.redes_sociais {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+}
+
+/* Redes sociais alinhadas à esquerda */
+.links-sociais {
+    display: flex;
+    flex-direction: column;  /* Organiza os itens na vertical */
+    align-items: flex-start; /* Alinha os ícones e links à esquerda */
+    gap: 5px;                /* Pequeno espaçamento entre os itens */
+    margin-bottom: 20px;     /* Distância do blog */
+
+}
+
+/* Ícones e textos das redes sociais */
+.links-sociais div {
+    display: flex;
+    align-items: center;  /* Alinha o ícone com o texto */
+    gap: 8px;             /* Espaço entre o ícone e o nome */
+    
+}
+
+.links-sociais img {
+    width: 24px;         /* Tamanho do ícone */
+    height: auto;
+}
+
+.links-sociais a {
+    font-size: 14px;     /* Ajusta o tamanho do texto */
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+}
+
+/* Blog centralizado com logo ao lado direito */
+.blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+/* Tamanho da logo do blog */
+.blog img {
+    
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*(FUNCIONALIDADES DO JAVASCRIPT)==========================================================================================================================================================================================================================*/
+/*Criação do botao voltar*/
+
+/* Estilo para o botão de Voltar */
+#btnVoltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnVoltar:hover {
+    background-color: #555;
+}
+
+/*Botao tema escuro*/
+
+.tema-escuro {
+    float: left;
+    margin-top: -10px;
+    margin-right: 0px;
+}
+
+.tema-escuro button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*Configuração para tema escuro*/
+
+/* Tema Escuro */
+.dark-mode {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode h1,
+.dark-mode .redes_sociais,
+.dark-mode .blog {
+    background-color: #000;
+    color: white;
+}
+
+.dark-mode h2 {
+    color: white;
+
+}
+
+.dark-mode nav {
+    background-color: #222;
+}
+
+.dark-mode nav ul li a {
+    color: white;
+}
+
+.dark-mode .ultimas-noticias, 
+.dark-mode .melhores-transferencias, 
+.dark-mode .ultimos-resultados, 
+.dark-mode .noticias-aleatorias {
+    background-color: #333;
+}
+
+.dark-mode .noticia-grande, 
+.dark-mode .noticia-lateral {
+    background-color: #444;
+}
+
+.dark-mode .search-bar button {
+    background-color: #777;
+}
+
+
+/* Comandos para o ícone de pesquisa - buscar */
+
+/* Posição do campo de busca */
+.search-bar {
+    float: right;
+    margin-top: -10px;
+    margin-right: 0px;
+}
+
+/*tamanho do campo de busca */
+.search-bar input {
+    padding: 5px;
+}
+
+.search-bar button {
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+}
+
+.highlight {
+    background-color: yellow; /* Cor de fundo para destacar a palavra */
+    font-weight: bold;         /* Deixar em negrito */
+}
+
+.hidden {
+    display: none;
+}
+
+/*(ATLETICO MG)==========================================================================================================================================================================================================================*/
+
+.atleticomg_header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.atleticomg_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.atleticomg_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.atleticomg_nav {
+
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.atleticomg_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.atleticomg_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.atleticomg_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/*(BAHIA)==========================================================================================================================================================================================================================*/
+
+.bahia_header {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 20px 0;
+}
+
+.bahia_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.bahia_nav {
+
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+}
+
+.bahia_midias {
+    background-color: blue;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.bahia_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: red; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.bahia_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*(CEARÁ)==========================================================================================================================================================================================================================*/
+
+.ceara_header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.ceara_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.ceara_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.ceara_nav {
+
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.ceara_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.ceara_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.ceara_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/* Betis)==========================================================================================================================================================================================================================*/
+
+.betis_logo img {
+    max-width: 300px;
+    text-align: left;
+    height: auto; /* Mantém a proporção */
+}
+
+
+
+/*(BOTAFOGO)==========================================================================================================================================================================================================================*/
+
+.botafogo_header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.botafogo_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.botafogo_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.botafogo_nav {
+
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.botafogo_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.botafogo_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.botafogo_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+
+/*(CRUZEIRO)==========================================================================================================================================================================================================================*/
+.cruzeiro_header {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 20px 0;
+}
+
+.cruzeiro_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.cruzeiro_nav {
+
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.cruzeiro_nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.cruzeiro_midias {
+    background-color: blue;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.cruzeiro_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: white; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+   
+}
+
+.cruzeiro_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*(BRAGANTINO)==========================================================================================================================================================================================================================*/
+.bragantino_header {
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+}
+
+.bragantino_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(255, 174, 0);
+    color: black;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.bragantino_nav {
+
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.bragantino_nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.bragantino_midias {
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.bragantino_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: white; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+   
+}
+
+.bragantino_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*(CEARÁ)==========================================================================================================================================================================================================================*/
+
+.ceara_header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.ceara_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+
+
+}
+
+.ceara_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.ceara_nav {
+
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.ceara_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.ceara_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #333; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.ceara_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/*(CORINTHIANS)==========================================================================================================================================================================================================================*/
+
+.corinthians_header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.corinthians_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.corinthians_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.corinthians_nav {
+
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Cor das letras do subtitulo */
+.corinthians_nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.corinthians_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.corinthians_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: red; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+   
+}
+
+.corinthians_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/*(FLAMENGO)==========================================================================================================================================================================================================================*/
+
+.flamengo_header {
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+}
+
+.flamengo_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.flamengo_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.flamengo_nav {
+
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Cor das letras do subtitulo */
+.flamengo_nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.flamengo_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.flamengo_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: red; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.flamengo_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/*(FLUMINENSE)==========================================================================================================================================================================================================================*/
+
+.fluminense_header {
+    text-align: center;
+    background-color: #5e1c1c;
+    color: white;
+    padding: 20px 0;
+}
+
+.fluminense_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #053600;
+    color: white;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.fluminense_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.fluminense_nav {
+
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+
+/* Cor das letras do subtitulo */
+.fluminense_nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.fluminense_midias {
+    background-color: #5e1c1c;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.fluminense_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #053600; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.fluminense_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/*(FORTALEZA)==========================================================================================================================================================================================================================*/
+
+.fortaleza_header {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 20px 0;
+}
+
+.fortaleza_titulo {
+
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 0;
+    font-size: 50px;
+
+}
+
+.fortaleza_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.fortaleza_nav {
+
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+}
+
+.fortaleza_midias {
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+
+
+}
+
+.fortaleza_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: blue; /* Cor de fundo dos subtitulos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+   
+}
+
+.fortaleza_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+
+}
+
+/*Site de noticias galo*/
+.noticiario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.noticiario h2, .noticiario h3 {
+    text-align: center;
+    color: #222;
+}
+
+.noticiario-imagem {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.noticiario-imagem img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/*(Gremio)==========================================================================================================================================================================================================================*/
+
+.gremio_header {  /*muda a cor de cima*/
+    text-align: center;
+    background-color: #004080; /* Azul do Grêmio */
+    color: white;
+    padding: 20px 0;
+}
+
+.gremio_titulo {
+    font-family: "Baskerville Old Face", sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #009de0; /* Azul celeste do Grêmio */
+    color: white; /*muda a cor da letra do titulo*/
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+.gremio_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.gremio_nav {
+    background-color: #000000; /* Preto do Grêmio */
+    padding: 10px;
+    text-align: center;
+}
+
+.gremio_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.gremio_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #000000; /* Preto do Grêmio */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.gremio_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+
+/* (Internacional) ====================================================================================================================================================== */
+
+.internacional_header {  /* Muda a cor do topo */
+    text-align: center;
+    background-color: #bb0000; /* Vermelho do Inter */
+    color: white;
+    padding: 20px 0;
+}
+
+.internacional_titulo {
+    font-family: "Baskerville Old Face", sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #e60000; /* Vermelho mais vibrante */
+    color: white; /* Cor da letra do título */
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+.internacional_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.internacional_nav {
+    background-color: #000000; /* Preto para contraste */
+    padding: 10px;
+    text-align: center;
+}
+
+.internacional_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.internacional_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #000000; /* Preto para contraste */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.internacional_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+
+/*(Juventude)==========================================================================================================================================================================================================================*/
+
+.juventude_header {  /*muda a cor de cima*/
+    text-align: center;
+    background-color: #006633; /* Verde do Juventude */
+    color: white;
+    padding: 20px 0;
+}
+
+.juventude_titulo {
+    font-family: "Baskerville Old Face", sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #009e60; /* Verde mais claro do Juventude */
+    color: white; /*muda a cor da letra do titulo*/
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+.juventude_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.juventude_nav {
+    background-color: #004d33; /* Verde escuro do Juventude */
+    padding: 10px;
+    text-align: center;
+}
+
+.juventude_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.juventude_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #004d33; /* Verde escuro do Juventude */
+    padding: 10px;
+    color: white;
+    padding: 20px 0;
+}
+
+.juventude_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+
+/*(Mirassol)==========================================================================================================================================================================================================================*/
+
+.mirassol_header {  /* Cabeçalho superior */
+    text-align: center;
+    background-color: #FFD700; /* Amarelo Mirassol */
+    color: #006400; /* Verde escuro Mirassol */
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.mirassol_titulo {
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #008000; /* Verde Mirassol */
+    color: white;
+    padding: 15px 0;
+    font-size: 50px;
+    border-bottom: 5px solid #FFD700; /* Detalhe em amarelo */
+}
+
+.mirassol_titulo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mirassol_nav {
+    background-color: #006400; /* Verde escuro Mirassol */
+    padding: 12px;
+    text-align: center;
+}
+
+.mirassol_midias {
+    background-color: #222;
+    color: white;
+    padding: 25px 0;
+}
+
+.mirassol_blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #008000; /* Verde Mirassol */
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    border-bottom: 5px solid #FFD700;
+}
+
+.mirassol_blog img {
+    width: 60px;
+    height: auto;
+}
+
+
+/*(Palmeiras)==========================================================================================================================================================================================================================*/
+
+.palmeiras_header {  /* Cabeçalho superior */
+    text-align: center;
+    background-color: #006437; /* Verde Palmeiras */
+    color: white;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 4px solid #FFC72C; /* Detalhe dourado */
+}
+
+.palmeiras_titulo {
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #008000; /* Verde Palmeiras */
+    color: white;
+    padding: 15px 0;
+    font-size: 50px;
+    border-bottom: 5px solid #FFC72C; /* Detalhe dourado */
+}
+
+.palmeiras_titulo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.palmeiras_nav {
+    background-color: #004225; /* Verde escuro Palmeiras */
+    padding: 12px;
+    text-align: center;
+    border-bottom: 3px solid #FFC72C;
+}
+
+.palmeiras_midias {
+    background-color: #222;
+    color: white;
+    padding: 25px 0;
+}
+
+.palmeiras_blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #008000; /* Verde Palmeiras */
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    border-bottom: 5px solid #FFC72C;
+}
+
+.palmeiras_blog img {
+    width: 60px;
+    height: auto;
+}
+
+
+/* (Vasco da Gama - Estilo Elegante) ========================================================================================================================================================================================================================== */
+
+.vasco_header {  /* Cabeçalho superior */
+    text-align: center;
+    background-color: #1C1C1C; /* Preto sofisticado */
+    color: #F5F5F5; /* Cinza claro para contraste elegante */
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 4px solid #B22222; /* Vermelho escuro para sofisticação */
+}
+
+.vasco_titulo {
+    font-family: "Baskerville Old Face", sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: #262626; /* Preto com um tom mais suave */
+    color: #FFFFFF;
+    padding: 15px 0;
+    font-size: 50px;
+    border-bottom: 5px solid #B22222; /* Vermelho escuro */
+}
+
+.vasco_titulo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.vasco_nav {
+    background-color: #333333; /* Preto acinzentado elegante */
+    padding: 12px;
+    text-align: center;
+    border-bottom: 3px solid #B22222;
+}
+
+.vasco_midias {
+    background-color: #1C1C1C;
+    color: #F5F5F5;
+    padding: 25px 0;
+}
+
+.vasco_blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #1C1C1C; /* Preto sofisticado */
+    padding: 15px;
+    color: #F5F5F5;
+    font-size: 20px;
+    border-bottom: 5px solid #B22222;
+}
+
+.vasco_blog img {
+    width: 60px;
+    height: auto;
+}
+
+
+/*(Santos)==========================================================================================================================================================================================================================*/
+
+.santos_header {  /*muda a cor de cima*/
+    text-align: center;
+    background-color: #000000; /* Preto do Santos */
+    color: white;
+    padding: 20px 0;
+}
+
+.santos_titulo {
+    font-family: "Baskerville Old Face", sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #FFFFFF; /* Branco do Santos */
+    color: #000000; /* Preto do Santos */
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+.santos_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.santos_nav {
+    background-color: #000000; /* Preto do Santos */
+    padding: 10px;
+    text-align: center;
+}
+
+.santos_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.santos_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #000000; /* Preto do Santos */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.santos_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+
+/*(São Paulo)==========================================================================================================================================================================================================================*/
+
+.saopaulo_header {  /*muda a cor de cima*/
+    text-align: center;
+    background-color: #FF0000; /* Vermelho do São Paulo */
+    color: white;
+    padding: 20px 0;
+}
+
+.saopaulo_titulo {
+    font-family: "Baskerville Old Face", sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #000000; /* Preto do São Paulo */
+    color: #FFFFFF; /* Branco do São Paulo */
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+.saopaulo_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.saopaulo_nav {
+    background-color: #000000; /* Preto do São Paulo */
+    padding: 10px;
+    text-align: center;
+}
+
+.saopaulo_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.saopaulo_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #000000; /* Preto do São Paulo */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.saopaulo_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+
+/*(Sport)==========================================================================================================================================================================================================================*/
+
+.sport_header {  /*muda a cor de cima*/
+    text-align: center;
+    background-color: #CC0000; /* Vermelho do Sport */
+    color: white;
+    padding: 20px 0;
+}
+
+.sport_titulo {
+    font-family: "Baskerville Old Face", sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #000000; /* Preto do Sport */
+    color: #FFFFFF; /* Branco do Sport */
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+.sport_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.sport_nav {
+    background-color: #000000; /* Preto do Sport */
+    padding: 10px;
+    text-align: center;
+}
+
+.sport_midias {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.sport_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 1px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #000000; /* Preto do Sport */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.sport_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+
+/*(Vitória - Cores Elegantes)==========================================================================================================================================================================================================================*/
+
+.vitoria_header {  /*muda a cor de cima*/
+    text-align: center;
+    background-color: #8B0000; /* Vermelho escuro (mais elegante) */
+    color: white;
+    padding: 20px 0;
+}
+
+.vitoria_titulo {
+    font-family: "Baskerville Old Face", sans-serif; 
+    margin: 0;
+    text-align: center;
+    background-color: #1C1C1C; /* Preto mais suave */
+    color: #FFFFFF; /* Branco */
+    padding: 10px 0;
+    font-size: 50px;
+}
+
+.vitoria_titulo a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor original do texto */
+}
+
+.vitoria_nav {
+    background-color: #1C1C1C; /* Preto mais suave */
+    padding: 10px;
+    text-align: center;
+}
+
+.vitoria_nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.vitoria_nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.vitoria_nav ul li a:hover {
+    color: #FFD700; /* Dourado para efeito hover */
+}
+
+.vitoria_midias {
+    background-color: #2E2E2E; /* Cinza escuro */
+    color: white;
+    padding: 20px 0;
+}
+
+.vitoria_midias .links-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.vitoria_midias .links-sociais a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.vitoria_midias .links-sociais a:hover {
+    color: #FFD700; /* Dourado para efeito hover */
+}
+
+.vitoria_blog {
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo */
+    align-items: center;      /* Mantém alinhado verticalmente */
+    gap: 10px;                /* Espaço entre o texto e a logo */
+    text-align: center;       /* Garante que o texto fique centralizado */
+    background-color: #1C1C1C; /* Preto mais suave */
+    padding: 10px;
+    color: white;
+    padding: 20px 0;
+}
+
+.vitoria_blog img {
+    width: 50px;    /* Ajuste conforme necessário */
+    height: auto;
+}
+
